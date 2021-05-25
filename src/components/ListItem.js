@@ -1,14 +1,12 @@
 import React from "react";
+ 
 
-const ListItem =() =>{
-
-
+export const ListItem =({id, todo}) =>{
 
     return(
         <>
-    
+            <li>Id ({id})  :   todo({todo})</li>
         </>
     )
 }
 
-export default ListItem

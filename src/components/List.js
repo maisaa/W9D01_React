@@ -1,18 +1,24 @@
 import React from "react";
-// import App from 'App.js';
+import { ListItem } from './ListItem'
 
-const List = ({ collection }) => {
-    console.log(",,,,,,", { collection })
+
+export const List = ({ collection }) => {
+    console.log("{ collection },,,,,,", { collection })
+
+    // const id=0 ;
+    // const todo='';
+    const l = collection.map((element, index) => {
+        return (<ListItem key={index} id={element.id} todo={element.todo}></ListItem>);
+    });
 
     return (
         <>
+
             <ul>
-                {collection.map((element, index) => {
-                    return <li key={index}> {element.todo} </li>;
-                })}
+                {l}
             </ul>
         </>
     );
 }
 
-export default List
+
