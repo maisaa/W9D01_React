@@ -13,7 +13,6 @@ export const List = ({ collection }) => {
 
     return (
         <>
-
             <ul>
                 {l}
             </ul>
